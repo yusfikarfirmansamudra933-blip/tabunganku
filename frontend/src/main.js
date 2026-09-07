@@ -697,3 +697,7 @@ function toast(msg) {
   }
   switchScreen("beranda");
 })();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").catch(function () {});
+}
